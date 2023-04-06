@@ -1,7 +1,9 @@
 import React from 'react';
-import imagenFondo from '../assets/images/mandalorian.jpg';
-import GenresInDb from './GenresInDb';
+import imagenFondo1 from '../assets/images/banner1.jpg';
+import imagenFondo2 from '../assets/images/banner2.jpg';
+//import GenerosDB from './GenerosDB';
 import ContentRowMovies from './ContentRowMovies';
+
 function ContentRowTop(){
     return(
         <React.Fragment>
@@ -11,38 +13,44 @@ function ContentRowTop(){
 						<h1 className="h3 mb-0 text-gray-800">StoneBlack Dashboard</h1>
 					</div>
 				
-					{/*<!-- Content Row Movies-->*/}
-					<ContentRowMovies />
-					{/*<!-- End movies in Data Base -->*/}
 					
-	
-					{/*<!-- Content Row Last Movie in Data Base -->*/}
+					<ContentRowMovies />
+																
 					<div className="row">
-						{/*<!-- Last Movie in DB -->*/}
+						
 						<div className="col-lg-6 mb-4">
 							<div className="card shadow mb-4">
 								<div className="card-header py-3">
-									<h5 className="m-0 font-weight-bold text-gray-800">Lo último en remeras</h5>
+									<h5 className="m-0 font-weight-bold text-gray-800">Las actuales</h5>
 								</div>
 								<div className="card-body">
 									<div className="text-center">
-										<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={imagenFondo} alt=" Star Wars - Mandalorian "/>
+										<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={imagenFondo1} alt=" Star Wars - Mandalorian "/>
 									</div>
 									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, consequatur explicabo officia inventore libero veritatis iure voluptate reiciendis a magnam, vitae, aperiam voluptatum non corporis quae dolorem culpa citationem ratione aperiam voluptatum non corporis ratione aperiam voluptatum quae dolorem culpa ratione aperiam voluptatum?</p>
 									<a className="btn btn-danger" target="_blank" rel="nofollow" href="/">Ver detalle de remeras</a>
 								</div>
 							</div>
 						</div>
-						{/*<!-- End content row last movie in Data Base -->*/}
-
-						{/*<!-- Genres in DB -->*/}
-						<GenresInDb />
-
-						{/*<!--End Genres In Db-->*/}		
+											
+						<div className="col-lg-6 mb-4">
+							<div className="card shadow mb-4">
+								<div className="card-header py-3">
+									<h5 className="m-0 font-weight-bold text-gray-800">Las que van a venir</h5>
+								</div>
+								<div className="card-body">
+									<div className="text-center">
+										<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={imagenFondo2} alt=" Star Wars - Mandalorian "/>
+									</div>
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, consequatur explicabo officia inventore libero veritatis iure voluptate reiciendis a magnam, vitae, aperiam voluptatum non corporis quae dolorem culpa citationem ratione aperiam voluptatum non corporis ratione aperiam voluptatum quae dolorem culpa ratione aperiam voluptatum?</p>
+									<a className="btn btn-danger" target="_blank" rel="nofollow" href="/">Elegí la que te gusta</a>
+								</div>
+							</div>
+						</div>
+							
 					</div>
 				</div>
-				{/*<!--End Content Row Top-->*/}
-
+				
         </React.Fragment>
     )
 
