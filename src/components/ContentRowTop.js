@@ -1,8 +1,7 @@
 import React from 'react';
 import imagenFondo1 from '../assets/images/banner1.jpg';
 import imagenFondo2 from '../assets/images/banner2.jpg';
-//import GenerosDB from './GenerosDB';
-import ContentRowMovies from './ContentRowMovies';
+import ContentRow from './ContentRow';
 
 function ContentRowTop(){
     return(
@@ -14,7 +13,7 @@ function ContentRowTop(){
 					</div>
 				
 					
-					<ContentRowMovies />
+					<ContentRow />
 																
 					<div className="row">
 						

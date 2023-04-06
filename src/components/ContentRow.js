@@ -5,21 +5,21 @@ let productInDataBase = {
     color:   "primary",
     titulo: "Usuarios en la base de datos",
     valor: 21,
-    icono: "fas fa-film",
+    icono: "fas fa-user",
 }
 
 let amount ={
     color:   "success",
     titulo: "Total de productos",
     valor: 79,
-    icono: "fas fa-award",
+    icono: "far fa-tshirt",
 }
 
 let user = {
     color:   "warning",
     titulo: "Ventas Totales",
     valor: 49,
-    icono: "fas fa-user",
+    icono: "fad fa-sack-dollar",
 }
 
 let cardProps = [productInDataBase,amount,user];
