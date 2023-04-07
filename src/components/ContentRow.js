@@ -1,28 +1,31 @@
 import React from 'react';
 import SmallCard from './SmallCard';
 
-let productInDataBase = {
+let usuarios = {
     color:   "primary",
     titulo: "Usuarios en la base de datos",
     valor: 21,
     icono: "fas fa-user",
+   
 }
 
-let amount ={
+let productos ={
     color:   "success",
     titulo: "Total de productos",
     valor: 79,
     icono: "far fa-tshirt",
+ 
 }
 
-let user = {
+let ventas = {
     color:   "warning",
     titulo: "Ventas Totales",
     valor: 49,
     icono: "fad fa-sack-dollar",
+  
 }
 
-let cardProps = [productInDataBase,amount,user];
+let cardProps = [usuarios,productos,ventas];
 
 
 function ContentRowTop(){

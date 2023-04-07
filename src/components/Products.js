@@ -31,15 +31,17 @@ class Products extends Component{
     render(){
         return (
             <React.Fragment>
-            {/*<!-- MOVIES LIST -->*/}
-            <h1 className="h3 mb-2 text-gray-800 text-center">Lista de productos en la base de datos</h1>
             
             {/*<!-- DataTales Example -->*/}
             <div className="card shadow mb-4">
                 <div className="card-body">
                     <div className="table-responsive">
+
+                    <h1 className="card-header text-center" >Lista de productos en la base de datos</h1> 
                         <table className="table table-bordered text-center " id="dataTable" width="100%" cellspacing="0">
-                            <thead>
+                        
+                            <thead >
+                               
                                 <tr>
                                     <th>ID</th>
                                     <th>Nombre</th>

@@ -1,5 +1,11 @@
 import React from 'react';
 import image from '../assets/images/logo-StoneBlack.png';
+import ContentWrapper from './ContentWrapper';
+import User from './User';
+import Products from './Products';
+import NotFound from './NotFound';
+
+import {Link, Route, Switch} from 'react-router-dom'; // hacer -----------> npm install react-router-dom
 
 function SideBar(){
     return(
@@ -10,7 +16,7 @@ function SideBar(){
                 {/*<!-- Sidebar - Brand -->*/}
                 <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
                     <div className="sidebar-brand-icon">
-                        <img className="w-100" src={image} alt="Digital House"/>
+                        <img className="w-100" src={image} alt=""/>
                     </div>
                 </a>
 
@@ -19,9 +25,9 @@ function SideBar(){
 
                 {/*<!-- Nav Item - Dashboard -->*/}
                 <li className="nav-item active">
-                    <a className="nav-link" href="/">
+                    <Link className="nav-link" to="/">
                         <i className="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Dashboard - StoneBlack</span></a>
+                        <span>Dashboard - StoneBlack</span></Link>
                 </li>
 
                 {/*<!-- Divider -->*/}
@@ -32,17 +38,17 @@ function SideBar(){
 
                 {/*<!-- Nav Item - Pages -->*/}
                 <li className="nav-item">
-                    <a className="nav-link collapsed" href="/">
+                    <Link className="nav-link collapsed" to="/User">
                         <i className="fas fa-fw fa-folder"></i>
-                        <span>Productos</span>
-                    </a>
+                        <span>Usuarios</span>
+                    </Link>
                 </li>
 
                 {/*<!-- Nav Item - Charts -->*/}
                 <li className="nav-item">
-                    <a className="nav-link" href="/">
+                    <Link className="nav-link" to="/Products">
                         <i className="fas fa-fw fa-chart-area"></i>
-                        <span>Mensajes</span></a>
+                        <span>Productos</span></Link>
                 </li>
 
                 {/*<!-- Nav Item - Tables -->*/}
@@ -55,6 +61,22 @@ function SideBar(){
                 {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider d-none d-md-block"/>
             </ul>
+            <Switch>
+                <Route exact path="/">
+                    <ContentWrapper />
+                </Route>
+
+                <Route path="/User">
+                    <User />
+                </Route>
+
+                <Route path="/Products">
+                    <Products />
+                </Route>
+
+                <Route component={NotFound} />                                     
+                
+            </Switch>
             {/*<!-- End of Sidebar -->*/}
             
         </React.Fragment>

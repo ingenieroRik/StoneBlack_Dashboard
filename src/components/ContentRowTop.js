@@ -24,10 +24,10 @@ function ContentRowTop(){
 								</div>
 								<div className="card-body">
 									<div className="text-center">
-										<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={imagenFondo1} alt=" Star Wars - Mandalorian "/>
+										<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={imagenFondo1} alt=" imagen "/>
 									</div>
 									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, consequatur explicabo officia inventore libero veritatis iure voluptate reiciendis a magnam, vitae, aperiam voluptatum non corporis quae dolorem culpa citationem ratione aperiam voluptatum non corporis ratione aperiam voluptatum quae dolorem culpa ratione aperiam voluptatum?</p>
-									<a className="btn btn-danger" target="_blank" rel="nofollow" href="/">Ver detalle de remeras</a>
+									<a className="btn btn-primary" target="_blank" rel="nofollow" href="/">Ver detalle de remeras</a>
 								</div>
 							</div>
 						</div>
@@ -39,10 +39,10 @@ function ContentRowTop(){
 								</div>
 								<div className="card-body">
 									<div className="text-center">
-										<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={imagenFondo2} alt=" Star Wars - Mandalorian "/>
+										<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={imagenFondo2} alt=" imagen "/>
 									</div>
 									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, consequatur explicabo officia inventore libero veritatis iure voluptate reiciendis a magnam, vitae, aperiam voluptatum non corporis quae dolorem culpa citationem ratione aperiam voluptatum non corporis ratione aperiam voluptatum quae dolorem culpa ratione aperiam voluptatum?</p>
-									<a className="btn btn-danger" target="_blank" rel="nofollow" href="/">Elegí la que te gusta</a>
+									<a className="btn btn-success" target="_blank" rel="nofollow" href="/">Elegí la que te gusta</a>
 								</div>
 							</div>
 						</div>
