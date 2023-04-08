@@ -10,16 +10,16 @@ import ProductsList from './ProductsList';
 
 function Products() {
 
-    const [products, setProductos] = useState([]);
+    const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('https://stoneblack.onrender.com/api/productos')  
+        fetch('/api/productos')  
         .then(respuesta =>{
             return respuesta.json()
         })
         .then(products =>{
-            //console.log(movies)
-            this.setState({products: products.data})
+            
+            setProducts(products.data)
         })
         .catch(error => console.log(error))
 
@@ -62,9 +62,9 @@ function Products() {
                             </tfoot>
                             <tbody>
                                 {
-                                    //console.log(this.state.movies)
-                                    products.map((products,index)=>{
-                                        return <ProductsList  {...products} key={index}  />
+                                
+                                    products.map((product,index)=>{
+                                        return <ProductsList  {...product} key={index}  />
                                     })
                                 }
                             </tbody>
