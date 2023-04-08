@@ -2,20 +2,18 @@
 //Apis  - Eventos
 import React, {Component} from 'react';
 
+import { useState, useEffect } from 'react';
+
+
 //Importar nuestro componente
 import ProductsList from './ProductsList';
 
-class Products extends Component{
-    constructor(){
-        super()
-        this.state ={
-            products : []
-        }
-    }
-    //Compomentes Ciclo de vida - Montar - Actualizar - Desmontar
-    //Montaje
-    componentDidMount(){
-        fetch('/api/productos')  
+function Products() {
+
+    const [products, setProductos] = useState([]);
+
+    useEffect(() => {
+        fetch('https://stoneblack.onrender.com/api/productos')  
         .then(respuesta =>{
             return respuesta.json()
         })
@@ -25,10 +23,9 @@ class Products extends Component{
         })
         .catch(error => console.log(error))
 
-    }
+    },[])
 
 
-    render(){
         return (
             <React.Fragment>
             
@@ -66,7 +63,7 @@ class Products extends Component{
                             <tbody>
                                 {
                                     //console.log(this.state.movies)
-                                    this.state.products.map((products,index)=>{
+                                    products.map((products,index)=>{
                                         return <ProductsList  {...products} key={index}  />
                                     })
                                 }
@@ -81,5 +78,5 @@ class Products extends Component{
     </React.Fragment>
     )
     }
-}
+
 export default Products;

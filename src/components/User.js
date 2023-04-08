@@ -1,34 +1,30 @@
 //Trabajando con componentes de estado - Clases
 //Apis  - Eventos
 import React, {Component} from 'react';
+import { useState, useEffect } from 'react';
+
 
 //Importar nuestro componente
 import UserList from './UserList';
 
-class User extends Component{
-    constructor(){
-        super()
-        this.state ={
-            usuarios : []
-        }
-    }
-    //Compomentes Ciclo de vida - Montar - Actualizar - Desmontar
-    //Montaje
-    componentDidMount(){
-        fetch('/api/usuarios')  //<------------------------------       /movies
-        .then(respuesta =>{
-            return respuesta.json()
-        })
-        .then(usuarios =>{
-            //console.log(movies)
-            this.setState({usuarios: usuarios.data})
-        })
-        .catch(error => console.log(error))
-
-    }
 
 
-    render(){
+
+function User() {
+
+    const [usuarios, setUsuarios] = useState([]);
+
+    useEffect(() => {
+            fetch("https://stoneblack.onrender.com/api/usuarios")
+                .then((response) => {
+                    return response.json()
+                })
+                .then((usuarios) => {
+                    setUsuarios(usuarios.data)
+                }).catch (error => console.log(error))
+        }, []) 
+       
+
         return (
             <React.Fragment>
            
@@ -60,7 +56,7 @@ class User extends Component{
                             <tbody>
                                 {
                                     //console.log(this.state.movies)
-                                    this.state.usuarios.map((usuario,index)=>{
+                                    usuarios.map((usuario,index)=>{
                                         return <UserList  {...usuario} key={index}  />
                                     })
                                 }
@@ -75,5 +71,5 @@ class User extends Component{
     </React.Fragment>
     )
     }
-}
+
 export default User;
