@@ -1,6 +1,6 @@
 import React from 'react';
 import SideBar from './SideBar';
-import ContentWrapper from './ContentWrapper';
+//import ContentWrapper from './ContentWrapper';
 
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <React.Fragment>
       	<div id="wrapper">
           <SideBar />
-               {/*<!-- antes estaba aca <Contentwrapper>  pero lo saque porque sino parace 2 veces -->*/}                   
+               {/*<!-- antes estaba aca <Contentwrapper>  pero lo saque porque sino aparace 2 veces -->*/}                   
         </div>
     </React.Fragment>
   );
