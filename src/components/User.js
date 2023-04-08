@@ -15,7 +15,7 @@ class User extends Component{
     //Compomentes Ciclo de vida - Montar - Actualizar - Desmontar
     //Montaje
     componentDidMount(){
-        fetch('/api/usuarios')  //<------------------------------       /movies
+        fetch('https://stoneblack.onrender.com/api/usuarios')  //<------------------------------       /movies
         .then(respuesta =>{
             return respuesta.json()
         })
