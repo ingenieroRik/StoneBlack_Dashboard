@@ -15,7 +15,7 @@ function User() {
     const [usuarios, setUsuarios] = useState([]);
 
     useEffect(() => {
-            fetch("https://stoneblack.onrender.com/api/usuarios")
+            fetch("/api/usuarios")
                 .then((response) => {
                     return response.json()
                 })

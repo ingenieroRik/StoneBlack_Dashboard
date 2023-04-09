@@ -13,7 +13,7 @@ function Products() {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('https://stoneblack.onrender.com/api/productos')  
+        fetch('/api/productos')  
         .then(respuesta =>{
             return respuesta.json()
         })
