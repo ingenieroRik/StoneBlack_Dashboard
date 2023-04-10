@@ -13,14 +13,20 @@ function Products() {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('https://www.stoneblack.onrender.com/api/productos')  
-        .then(respuesta =>{
-            return respuesta.json()
-        })
-        .then(products =>{
+        fetch('https://stoneblack.onrender.com//api/productos',
+        {    
+            method: 'GET',    
+            withCredentials: false,    
+            crossorigin: true,    
+            mode: 'no-cors', 
+            'headers': {
+              'Access-Control-Allow-Origin': '*'}}
+        )  
+        .then(respuesta => {
+            return respuesta.json()})
+        .then(products => {
             
-            setProducts(products.data)
-        })
+            setProducts(products.data)})
         .catch(error => console.log(error))
 
     },[])
