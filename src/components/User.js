@@ -1,6 +1,6 @@
 //Trabajando con componentes de estado - Clases
 //Apis  - Eventos
-import React, {Component} from 'react';
+import React from 'react';
 import { useState, useEffect } from 'react';
 
 
@@ -15,7 +15,7 @@ function User() {
     const [usuarios, setUsuarios] = useState([]);
 
     useEffect(() => {
-            fetch("/api/usuarios")
+            fetch("https://www.stoneblack.onrender.com/api/usuarios")
                 .then((response) => {
                     return response.json()
                 })

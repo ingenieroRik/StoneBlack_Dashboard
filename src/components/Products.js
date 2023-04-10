@@ -1,6 +1,6 @@
 //Trabajando con componentes de estado - Clases
 //Apis  - Eventos
-import React, {Component} from 'react';
+import React from 'react';
 
 import { useState, useEffect } from 'react';
 
@@ -13,7 +13,7 @@ function Products() {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('https://stoneblack.onrender.com/api/productos')  
+        fetch('https://www.stoneblack.onrender.com/api/productos')  
         .then(respuesta =>{
             return respuesta.json()
         })
