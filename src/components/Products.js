@@ -13,17 +13,9 @@ function Products() {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('https://stoneblack.onrender.com//api/productos',
-        {    
-            method: 'GET',    
-            withCredentials: false,    
-            crossorigin: true,    
-            mode: 'no-cors', 
-            'headers': {
-              'Access-Control-Allow-Origin': '*'}}
-        )  
+        fetch('/api/productos')  
         .then(respuesta => {
-            return respuesta.json()})
+             return respuesta.json()})
         .then(products => {
             
             setProducts(products.data)})

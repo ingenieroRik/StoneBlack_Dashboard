@@ -15,16 +15,7 @@ function User() {
     const [usuarios, setUsuarios] = useState([]);
 
     useEffect(() => {
-            fetch("https://www.stoneblack.onrender.com/api/usuarios",
-            {    
-                method: 'GET',    
-                withCredentials: false,    
-                crossorigin: true,    
-                mode: 'no-cors', 
-                'headers': {
-                  'Access-Control-Allow-Origin': '*'}}
-            
-            )
+            fetch("/api/usuarios")
                 .then((response) => {
                     return response.json()
                 })
