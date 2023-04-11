@@ -14,7 +14,7 @@ function Products() {
     const [recuperado, setRecuperado] = useState(false)
 
     useEffect(() => {
-        fetch('/api/productos',{
+        fetch('https://stoneblack.onrender.com/api/productos',{
             headers:{
                 "accepts":"application/json"
             }})  
