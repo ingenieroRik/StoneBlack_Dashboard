@@ -11,19 +11,26 @@ import ProductsList from './ProductsList';
 function Products() {
 
     const [products, setProducts] = useState([]);
+    const [recuperado, setRecuperado] = useState(false)
 
     useEffect(() => {
-        fetch('/api/productos')  
+        fetch('/api/productos',{
+            headers:{
+                "accepts":"application/json"
+            }})  
         .then(respuesta => {
              return respuesta.json()})
         .then(products => {
-            
+            setRecuperado(true);
             setProducts(products.data)})
         .catch(error => console.log(error))
 
-    },[])
+    },[]);
 
-
+    if (!recuperado) 
+     return (<div>.........recuperando datos.........</div>)
+      else 
+   
         return (
             <React.Fragment>
             
@@ -75,6 +82,8 @@ function Products() {
     
     </React.Fragment>
     )
+     
+                            
     }
 
 export default Products;
