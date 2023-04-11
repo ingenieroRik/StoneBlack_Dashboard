@@ -13,16 +13,22 @@ import UserList from './UserList';
 function User() {
 
     const [usuarios, setUsuarios] = useState([]);
+    const [recuperado, setRecuperado] = useState(false)
 
     useEffect(() => {
-            fetch("/api/usuarios")
+            fetch("https://stoneblack.onrender.com/api/usuarios")
                 .then((response) => {
                     return response.json()
                 })
                 .then((usuarios) => {
+                    setRecuperado(true);
                     setUsuarios(usuarios.data)
                 }).catch (error => console.log(error))
-        }, []) 
+        }, []);
+        if (!recuperado) 
+     return (<div>.........recuperando datos.........</div>)
+      else 
+   
        
 
         return (

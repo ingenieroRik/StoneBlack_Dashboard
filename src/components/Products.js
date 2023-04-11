@@ -15,9 +15,10 @@ function Products() {
 
     useEffect(() => {
         fetch('https://stoneblack.onrender.com/api/productos',{
-            headers:{
-                "accepts":"application/json"
-            }})  
+            mode: 'no-cors',
+            credentials: 'omit'
+        }
+            )  
         .then(respuesta => {
              return respuesta.json()})
         .then(products => {
