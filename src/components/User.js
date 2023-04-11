@@ -16,11 +16,7 @@ function User() {
     const [recuperado, setRecuperado] = useState(false)
 
     useEffect(() => {
-            fetch("https://stoneblack.onrender.com/api/usuarios",{
-                mode: 'no-cors',
-                credentials: 'omit'
-            }
-            )
+            fetch("/api/usuarios")
                 .then((response) => {
                     return response.json()
                 })
@@ -29,6 +25,8 @@ function User() {
                     setUsuarios(usuarios.data)
                 }).catch (error => console.log(error))
         }, []);
+
+
         if (!recuperado) 
      return (<div>.........recuperando datos.........</div>)
       else 
