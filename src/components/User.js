@@ -16,7 +16,7 @@ function User() {
     const [recuperado, setRecuperado] = useState(false)
 
     useEffect(() => {
-            fetch("https://stoneblack.onrender.com/api/usuarios"{
+            fetch("https://stoneblack.onrender.com/api/usuarios",{
                 mode: 'no-cors',
                 credentials: 'omit'
             }
