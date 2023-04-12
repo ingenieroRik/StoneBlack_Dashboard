@@ -35,7 +35,7 @@ function ContentRowTop(){
    
 
     useEffect(() => {
-            fetch("/api/usuarios"
+            fetch("https://stoneblack.onrender.com/api/usuarios"
             )
                 .then((response) => {
                     return response.json()
@@ -44,7 +44,7 @@ function ContentRowTop(){
                  
                     setUsers(users.meta)
                                   
-                }).catch (error => console.log(error))
+                }).catch (error => (error))
         }, []);
   
      
@@ -53,7 +53,7 @@ function ContentRowTop(){
         const [products, setProducts] = useState([]);
    
         useEffect(() => {
-            fetch("/api/productos"
+            fetch("https://stoneblack.onrender.com/api/productos"
             )
                 .then((response) => {
                     return response.json()
@@ -62,7 +62,7 @@ function ContentRowTop(){
                  
                     setProducts(products.meta)
                                   
-                }).catch (error => console.log(error))
+                }).catch (error => (error))
         }, []);
 
         productos.valor = products.total;

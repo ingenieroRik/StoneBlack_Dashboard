@@ -24,7 +24,7 @@ function Products() {
         .then(products => {
             setRecuperado(true);
             setProducts(products.data)})
-        .catch(error => console.log(error))
+        .catch(error => (error))
 
     },[]);
 
