@@ -22,6 +22,7 @@ function User() {
                 })
                 .then((usuarios) => {
                     setRecuperado(true);
+                    console.log(usuarios);
                     setUsuarios(usuarios.data)
                 }).catch (error => console.log(error))
         }, []);
