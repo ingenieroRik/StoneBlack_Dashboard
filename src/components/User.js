@@ -16,7 +16,7 @@ function User() {
     const [recuperado, setRecuperado] = useState(false)
 
     useEffect(() => {
-            fetch("/api/usuarios")
+            fetch("https://stoneblack.onrender.com/api/usuarios")
                 .then((response) => {
                     return response.json()
                 })
