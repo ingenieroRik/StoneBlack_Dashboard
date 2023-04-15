@@ -14,7 +14,7 @@ function SideBar(){
             <ul className="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion" id="accordionSidebar">
 
                 {/*<!-- Sidebar - Brand -->*/}
-                <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
+                <a className="sidebar-brand d-flex align-items-center justify-content-center" href="https://stoneblack.onrender.com/">
                     <div className="sidebar-brand-icon">
                         <img className="w-100" src={image} alt=""/>
                     </div>
