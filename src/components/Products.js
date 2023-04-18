@@ -14,10 +14,7 @@ function Products() {
     const [recuperado, setRecuperado] = useState(false)
 
     useEffect(() => {
-        fetch('"https://stoneblack.onrender.com/api/productos',{
-            mode: 'no-cors',
-            credentials: 'omit'
-        }
+        fetch('"https://stoneblack.onrender.com/api/productos'
             )  
         .then(respuesta => {
              return respuesta.json()})
