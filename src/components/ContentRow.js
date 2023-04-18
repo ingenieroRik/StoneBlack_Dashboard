@@ -35,10 +35,7 @@ function ContentRowTop(){
    
 
     useEffect(() => {
-            fetch("https://stoneblack.onrender.com/api/usuarios",{
-                mode: 'no-cors',
-                credentials: 'omit'}
-            )
+            fetch("https://stoneblack.onrender.com/api/usuarios")
                 .then((response) => {
                     return response.json()
                 })
@@ -55,10 +52,7 @@ function ContentRowTop(){
         const [products, setProducts] = useState([]);
    
         useEffect(() => {
-            fetch("https://stoneblack.onrender.com/api/productos",{
-                mode: 'no-cors',
-                credentials: 'omit'}
-            )
+            fetch("https://stoneblack.onrender.com/api/productos" )
                 .then((response) => {
                     return response.json()
                 })
