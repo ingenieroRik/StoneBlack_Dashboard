@@ -5,25 +5,25 @@ import { useState, useEffect } from 'react';
 
 
 //Importar nuestro componente
-import UserList from './UserList';
+import ListaVentas from './ListaVentas';
 
 
 
 
-function User() {
+function Ventas() {
 
-    const [usuarios, setUsuarios] = useState([]);
+    const [ventas, setVentas] = useState([]);
     const [recuperado, setRecuperado] = useState(false)
 
     useEffect(() => {
-            fetch("https://stoneblack.onrender.com/api/usuarios")
+            fetch("https://stoneblack.onrender.com/api/ventas")
                 .then((response) => {
                     return response.json()
                 })
-                .then((usuarios) => {
+                .then((ventas) => {
                     setRecuperado(true);
-                    //console.log(usuarios);
-                    setUsuarios(usuarios.data)
+                    //console.log(ventas);
+                    setVentas(ventas.data)
                 }).catch (error => (error))
         }, []);
 
@@ -43,30 +43,30 @@ function User() {
                 <div className="card-body">
                     <div className="table-responsive">
 
-                    <h1 className="card-header text-center">Lista de usuarios en la base de datos</h1>
+                    <h1 className="card-header text-center">Lista de ventas en la base de datos</h1>
                         <table className="table table-bordered text-center " id="dataTable" width="100%" cellspacing="0">
                             <thead>
                             
                                 <tr>
-                                    <th>Id</th>
-                                    <th>Nombre</th>
-                                    <th>email</th>
+                                    <th>No. Factura</th>
+                                    <th>Fecha</th>
+                                    <th>Monto</th>
                                    
                                 </tr>
                             </thead>
                             <tfoot>
                                 <tr>
-                                    <th>Id</th>
-                                    <th>Nombre</th>
-                                    <th>email</th>
+                                    <th>No. Factura</th>
+                                    <th>Fecha</th>
+                                    <th>Monto</th>
                                    
                                 </tr>
                             </tfoot>
                             <tbody>
                                 {
-                                    //console.log(this.state.movies)
-                                    usuarios.map((usuario,index)=>{
-                                        return <UserList  {...usuario} key={index}  />
+                                   
+                                    ventas.map((venta,index)=>{
+                                        return <ListaVentas  {...venta} key={index}  />
                                     })
                                 }
                             </tbody>
@@ -74,11 +74,8 @@ function User() {
                     </div>
                 </div>
         </div>
-
-
-    
-    </React.Fragment>
+        </React.Fragment>
     )
     }
 
-export default User;
+export default Ventas;

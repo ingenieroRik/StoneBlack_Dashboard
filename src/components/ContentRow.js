@@ -21,8 +21,8 @@ let productos ={
 
 let ventas = {
     color:   "warning",
-    titulo: "Ventas Totales",
-    valor: 49,
+    titulo: "Total de Ventas",
+    valor: 0,
     icono: "fad fa-sack-dollar",
   
 }
@@ -64,6 +64,25 @@ function ContentRowTop(){
         }, []);
 
         productos.valor = products.total;
+
+
+
+        const [ventas1, setVentas] = useState([]); // le pono ventas1 porque ventas ya esta en uso
+        useEffect(() => {
+            fetch("https://stoneblack.onrender.com/api/ventas" )
+                .then((response) => {
+                    return response.json()
+                })
+                .then((ventas1) => {
+                 
+                    setVentas(ventas1.meta)
+                                  
+                }).catch (error => (error))
+        }, []);
+
+        ventas.valor = ventas1.total;
+
+
 
     return (
         <React.Fragment>

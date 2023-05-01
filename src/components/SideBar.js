@@ -4,6 +4,7 @@ import ContentWrapper from './ContentWrapper';
 import User from './User';
 import Products from './Products';
 import NotFound from './NotFound';
+import Ventas from './Ventas';
 
 import {Link, Route, Switch} from 'react-router-dom'; // hacer -----------> npm install react-router-dom
 
@@ -53,9 +54,9 @@ function SideBar(){
 
                 {/*<!-- Nav Item - Tables -->*/}
                 <li className="nav-item">
-                    <a className="nav-link" href="/">
+                    <Link className="nav-link" to="/Ventas">
                         <i className="fas fa-fw fa-sack-dollar"></i>
-                        <span>Ventas</span></a>
+                        <span>Ventas</span></Link>
                 </li>
 
                 {/*<!-- Divider -->*/}
@@ -72,6 +73,10 @@ function SideBar(){
 
                 <Route path="/Products">
                     <Products />
+                </Route>
+
+                <Route path="/Ventas">
+                    <Ventas />
                 </Route>
 
                 <Route component={NotFound} />                                     
